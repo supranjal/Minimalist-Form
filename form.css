@@ -1,3 +1,10 @@
+ *,*::before, *::after {/* Apply box-sizing to all elements and their pseudo-elements to include padding and border in the element's total width and height */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
 body{
     display: flex;
     background-image: url('./imgs/background.jpg');
@@ -118,6 +125,25 @@ legend{
     box-shadow: 0 0 8px rgba(74, 144, 226, 0.4); /* Enhanced focus effect */
     transform: translateY(-1px); /* Subtle lift effect */
 }
+.input-field:has(input:invalid) /* when the input field has input invalid the border color changes to red */
+{
+    border-color: #ff3b30;
+    box-shadow: 0 0 5px rgba(255, 59, 48, 0.5);
+}
+input:invalid {/* this one was add cause there was outline and box-shadow in the input's placeholder */
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+}
+.input-field:focus-within:has(input:invalid)/* when focused the color also changes */
+{
+    border-color: #ff3b30;
+    box-shadow: 0 0 5px rgba(255, 59, 48, 0.5);
+}
+
+
+
+
 
 /* Added responsive adjustments for smaller screens */
 @media (max-width: 480px) {
