@@ -113,7 +113,7 @@ legend{
     text-align: center;
     font-size: 28px; /* Increased for better visual hierarchy */
     font-weight: 600;
-    color: #333;
+    color: #ffce44; /* Bright golden yellow that stands out against black and blue */
     padding: 0 10px;
     margin-bottom: 25px; /* Increased spacing below heading */
     width: 100%; /* made it take entire width and made it look like it went to center */
